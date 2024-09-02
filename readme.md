@@ -1,13 +1,16 @@
+<h3 align="center">Criando um Personal Trainer IA com Boas Práticas de Prompt Engineer usando Claude 3.5 Sonnet</h3>
 <p align="center">
-    <img width="300px" src=".github/assets/logo_2.png">
+    <img width="300px" src="https://github.com/user-attachments/assets/24c920b5-c50e-41ae-b355-a64517a8a53f">
+
 </p>
 
 <p align="center">
-<a href="https://dio.me/"><img src="https://img.shields.io/badge/DIO-Project-FED564?logo=youtube" alt="DIO - Project"></a>
-<a href="https://www.gnu.org/software/bash/" title="Go to Bash homepage"><img src="https://img.shields.io/badge/Prompt-Project-FED564?logo=gnu-bash&amp;logoColor=white" alt="Made with Bash"></a>
-<a href="https://aws.amazon.com/" title="Powered by AWS">
-  <img src="https://img.shields.io/badge/Powered%20by-AWS-FED564?logo=icloud&logoColor=white" alt="Powered by AWS">
-</a>
+<a href="https://en.wikipedia.org/wiki/Artificial_intelligence"><img src="https://img.shields.io/badge/AI-Project-FED564?logo=openai" alt="AI - Project"></a>
+<a href="https://dio.me/"><img src="https://img.shields.io/badge/DIO-Project-FED564?logo=vimeo" alt="DIO - Project"></a>
+<a href="https://www.gnu.org/software/bash/" title="Vá para a página inicial do Bash"><img src="https://img.shields.io/badge/Prompt-Project-FED564?logo=gnu-bash&amp;logoColor=white" alt="Feito com Bash"></a>
+<a href="https://aws.amazon.com/" title="Powered by AWS"><img src="https://img.shields.io/badge/Powered%20by-aws-FED564?logo=icloud&logoColor=white" alt="Powered by AWS"></a>
+<a href="https://aws.amazon.com/bedrock/claude/?sec=bcomfai&pos=3" title="Powered by Anthropic"><img src="https://img.shields.io/badge/Powered%20by-Anthropic-FED564?logo=Anthropic&logoColor=white" alt="Powered by Anthropic"></a>
+
 </p>
 
 <p align="center">
@@ -20,11 +23,7 @@ O projeto deve ser feito utilizando as boas práticas de prompt engineer.
 
 - [📋 Índice](#-índice)
 - [📝 Introdução](#-introdução)
-- [💪 Biotipos Corporais](#-biotipos-corporais)
-- [📅 Dias Disponíveis para Treino](#-dias-disponíveis-para-treino)
-- [🏋️ Tipos de Exercícios](#️-tipos-de-exercícios)
 - [🛠️ Regras de negócio](#️-regras-de-negócio)
-- [📖 Material de Apoio](#-material-de-apoio)
 - [🎯 Prompt de Resposta Proposto](#-prompt-de-resposta-proposto)
 
 ---
@@ -35,10 +34,10 @@ Este projeto visa criar um assistente de personal trainer automatizado que ajuda
 
 ---
 
-## 💪 Biotipos Corporais
 
-A primeira regra para personalizar o treino é determinar o biotipo corporal do usuário. Existem três biotipos principais:
+## 🛠️ Regras de negócio
 
+1. **Identifique seu biotipo corporal** 
 <table>
   <tr>
     <th>Imagem</th>
@@ -52,72 +51,77 @@ A primeira regra para personalizar o treino é determinar o biotipo corporal do 
     <td><strong>Ectomorfo</strong></td>
     <td>Corpo mais magro, difícil ganhar peso e massa muscular.</td>
   </tr>
-  <tr>
-    <td style="text-align: center;">
-      <img src=".github/assets/mesomorph.jpg" width="50%" height="50%">
-    </td>
-    <td><strong>Mesomorfo</strong></td>
-    <td>Corpo naturalmente musculoso, facilidade para ganhar massa muscular e perder gordura.</td>
-  </tr>
-  <tr>
-    <td style="text-align: center;">
-      <img src=".github/assets/endmorph.jpg" width="50%" height="50%">
-    </td>
-    <td><strong>Endomorfo</strong></td>
-    <td>Corpo com tendência a acumular gordura, maior dificuldade em perder peso.</td>
-  </tr>
+ 
 </table>
 
-> **Nota:** Escolha o biotipo que mais se aproxima do seu corpo atual para que o treino seja mais eficiente.
 
----
-
-## 📅 Dias Disponíveis para Treino
-
-A segunda regra é determinar quantos dias por semana o usuário tem disponível para treinar. Dependendo do número de dias, o treino sugerido pode variar:
-
+2. **Determine quantos dias por semana você pode treinar** e escolha o tipo de treino mais adequado.
+ 
 | **Imagem**                                                     | **Dias por Semana** | **Tipo de Treino Sugerido** |
 | -------------------------------------------------------------- | ------------------- | --------------------------- |
-| <img src=".github/assets/calendar.png" width="50" height="50"> | 1 dia               | Treino Full Body            |
-| <img src=".github/assets/calendar.png" width="50" height="50"> | 3 dias              | Treino ABC                  |
-| <img src=".github/assets/calendar.png" width="50" height="50"> | 5 dias              | Treino ABCDE                |
-
-- **Full Body**: Treino que trabalha o corpo todo em uma única sessão.
-- **ABC**: Divisão do treino em três dias, cada um focado em grupos musculares diferentes.
-- **ABCDE**: Divisão do treino em cinco dias, com foco ainda mais específico em cada grupo muscular.
-
----
-
-## 🏋️ Tipos de Exercícios
-
-A terceira regra envolve a escolha do tipo de exercício preferido. Aqui estão algumas categorias com exemplos:
+| <img src=".github/assets/calendar.png" width="50" height="50"> | 5 dias              | Treino Funcional            |
+3. **Selecione o tipo de exercício** que prefere realizar e que se encaixa melhor nos seus objetivos.
 
 | **Imagem**                                                       | **Tipo de Treino** | **Descrição**                                                                                                 |
 | ---------------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------- |
 | <img src=".github/assets/dumbells.png" width="50%" height="50%"> | **Funcional**      | Exercícios que melhoram a funcionalidade do corpo, usando movimentos naturais.                                |
-| <img src=".github/assets/4760665.png" width="50%" height="50%">  | **Maquinário**     | Exercícios feitos em máquinas, com foco em isolar grupos musculares.                                          |
-| <img src=".github/assets/barr.png" width="50%" height="50%">     | **Peso Livre**     | Exercícios com pesos livres, como halteres e barras, para trabalhar vários grupos musculares simultaneamente. |
-| <img src=".github/assets/cardio.png" width="50%" height="50%">   | **Cardio**         | Exercícios voltados para melhorar a resistência cardiovascular, como corrida ou ciclismo.                     |
-| <img src=".github/assets/hiit.png" width="50%" height="50%">     | **HIIT**           | Treinos intervalados de alta intensidade, ótimos para queima de gordura.                                      |
-
----
-
-## 🛠️ Regras de negócio
-
-1. **Identifique seu biotipo corporal** consultando a seção de biotipos.
-2. **Determine quantos dias por semana você pode treinar** e escolha o tipo de treino mais adequado.
-3. **Selecione o tipo de exercício** que prefere realizar e que se encaixa melhor nos seus objetivos.
 4. Use o prompt do assistente para gerar um plano de treino personalizado.
+<p>Este plano de treino foi desenvolvido especificamente para um biotipo ectomorfo, focando em exercícios compostos e funcionais que estimulam o ganho de massa muscular e força. Aqui estão algumas observações adicionais:</p> 
+
+1. Frequência: O plano distribui o trabalho ao longo de 5 dias, permitindo um bom equilíbrio entre estímulo e recuperação.
+2. Progressão: À medida que você se adaptar, aumente gradualmente o número de repetições ou adicione peso aos exercícios.
+3. Nutrição: Para um ectomorfo, é crucial manter uma dieta hipercalórica rica em proteínas para suportar o ganho de massa muscular.
+4. Descanso: Garanta 7-9 horas de sono por noite para uma recuperação adequada.
+5. Core: Embora não haja treinos abdominais específicos, muitos exercícios engajam o core, proporcionando fortalecimento indireto.
 
 ---
 
-## 📖 Material de Apoio
+# 🎯 Prompt de Resposta Proposto 
 
-Aqui estão alguns recursos adicionais que podem ser úteis para entender melhor o projeto e as práticas de prompt engineering:
 
-- [Fundamentos de Engenharia de prompt](https://elidianaandrade.gitbook.io/fundamentos-de-engenharia-de-prompts-com-claude-3)
-- [Boas práticas de prompt](https://aline-antunes.gitbook.io/otimize-seus-prompts-e-aprenda-mais-usando-ias-1)
+# Plano de Treino Funcional para Ectomorfo - 5 dias por semana
 
----
+## Objetivo: Ganho de massa muscular e força
 
-## 🎯 Prompt de Resposta Proposto
+### Dia 1: Pernas e Glúteos
+1. Agachamento com peso corporal: 3 séries de 15 repetições
+2. Afundo alternado: 3 séries de 12 repetições por perna
+3. Ponte de glúteos: 3 séries de 15 repetições
+4. Subida no step: 3 séries de 12 repetições por perna
+5. Agachamento com salto: 3 séries de 10 repetições
+
+### Dia 2: Peito e Tríceps
+1. Flexão de braço: 3 séries de 10-12 repetições
+2. Mergulhos em banco: 3 séries de 10-12 repetições
+3. Flexão com pés elevados: 3 séries de 10 repetições
+4. Tríceps no banco: 3 séries de 12 repetições
+5. Prancha com toque no ombro: 3 séries de 30 segundos
+
+### Dia 3: Costas e Bíceps
+1. Remada invertida: 3 séries de 12 repetições
+2. Superman: 3 séries de 15 repetições
+3. Flexão de braço com remada: 3 séries de 10 repetições
+4. Rosca bíceps com garrafa d'água: 3 séries de 12 repetições
+5. Prancha lateral: 3 séries de 30 segundos (cada lado)
+
+### Dia 4: Ombros e Core
+1. Elevação lateral com garrafa d'água: 3 séries de 12 repetições
+2. Pike push-up: 3 séries de 10 repetições
+3. Círculos com os braços: 3 séries de 15 repetições
+4. Mountain climbers: 3 séries de 30 segundos
+5. Prancha com elevação alternada de pernas: 3 séries de 30 segundos
+
+### Dia 5: Circuito Full Body
+1. Burpees: 45 segundos
+2. Polichinelos: 45 segundos
+3. Agachamento com salto: 45 segundos
+4. Flexão de braço: 45 segundos
+5. Corrida parada: 45 segundos
+- Repita o circuito 3-4 vezes, com 1 minuto de descanso entre cada rodada
+
+### Observações:
+- Realize um aquecimento de 5-10 minutos antes de cada sessão
+- Descanse 30-60 segundos entre as séries
+- Mantenha-se hidratado durante os treinos
+- Aumente gradualmente a intensidade e o peso conforme sua adaptação
+- Inclua exercícios de alongamento ao final de cada sessão
